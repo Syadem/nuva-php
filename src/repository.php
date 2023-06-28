@@ -10,11 +10,13 @@ class Repository {
     foreach($data as &$value) {
       $this->data[$value->id] = $value;
     }
-
   }
 
   public function find($id){
-    // print(var_dump($this->data[$id]));
     return $this->data[$id];
+  }
+
+  public function all(){
+    return $this->data;
   }
 }

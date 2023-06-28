@@ -13,9 +13,11 @@ class Container {
 
 		private $nuva_root;
 		public $repositories;
+		public $version;
 
 		public function __construct($nuva_root) {
 			$this->nuva_root = $nuva_root;
+			$this->version = $nuva_root->version;
 			$this->repositories = new \StdClass();
 			$this->repositories->vaccines = new Repository($nuva_root->vaccines);
 		}
