@@ -1,7 +1,7 @@
 <?php
 namespace Syadem\Nuva;
 
-require "./entities/root.php";
+require(__DIR__ . '/entities/root.php');
 
 class Container {
     public static function init($baseUrl = "https://cdnnuva.mesvaccins.net") {
