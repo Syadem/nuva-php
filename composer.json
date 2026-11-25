@@ -2,12 +2,10 @@
   "name": "syadem/nuva",
   "description": "Nuva wrapper",
   "type": "library",
-  "require": {
-  },
+  "license": "MIT",
+  "require": {},
   "autoload": {
-    "psr-4": {
-      "Syadem\\Nuva\\": "src/"
-    }
+    "classmap": ["src/"]
   },
   "authors": [
     {

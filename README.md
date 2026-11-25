@@ -1,18 +1,26 @@
-# NUVA
+# Nuva for PHP
 
-## How to add the NUVA lib to your project
+## Installation
+
+The package is published on [Packagist](https://packagist.org/packages/syadem/nuva). Install it with [Composer](https://getcomposer.org/):
 
 ```bash
-composer config repositories.64 composer https://gitlab.mesvaccins.net/api/v4/group/64/-/packages/composer/packages.json
-
-composer config gitlab-token.gitlab.mesvaccins.net <username> <token>
-
-composer config gitlab-domains gitlab.mesvaccins.net
-
-composer require syadem/nuva:<version>
+composer require syadem/nuva
 ```
 
-## How to generate credentials to access the NUVA lib
+## Usage
 
-- Go to [the repository settings of group "Client libs"](https://gitlab.mesvaccins.net/groups/syadem/client-libs/-/settings/repository)
-- Generate a deploy token
+`Container::init()` downloads the latest version of the nomenclature. It is costly: call it once and keep the instance in a global cache.
+
+```php
+<?php
+$container = Syadem\Nuva\Container::init();
+
+foreach ($container->getVaccines()->all() as $vaccine) {
+  echo $vaccine->getName()->getFr() . "\n";
+}
+```
+
+## License
+
+MIT
