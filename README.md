@@ -2,9 +2,10 @@
 
 ## Installation
 
-The package is published on [Packagist](https://packagist.org/packages/syadem/nuva). Install it with [Composer](https://getcomposer.org/):
+Declare this repository in your `composer.json`, then install the package with [Composer](https://getcomposer.org/):
 
 ```bash
+composer config repositories.syadem-nuva git https://github.com/Syadem/nuva-php.git
 composer require syadem/nuva
 ```
 
